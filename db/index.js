@@ -1,10 +1,9 @@
 const mongoose = require('mongoose')
 
 mongoose
-  .connect('mongodb://127.0.0.1:27017/booksDatabase', {
+  .connect('mongodb://127.0.0.1:27017/postBoardDatabase', {
     useUnifiedTopology: true,
     useNewUrlParser: true,
-    useFindAndModify: true
   })
   .then(() => {
     console.log('Successfully connected to MongoDB.')

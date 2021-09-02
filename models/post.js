@@ -1,12 +1,14 @@
 const { Schema } = require('mongoose')
 
-const Post = new Schema(
+const PostSchema = new Schema(
   {
-    name: { type: String, required: true },
-    text: { type: String, required: true },
-    ref: { type: String, required: true }
+    author: { type: String, required: true },
+    content: { type: String, required: true },
+    channel: { type: String, required: true },
+    likes: [String],
+    comments: [String]
   },
   { timestamps: true }
 )
 
-module.exports = Post
+module.exports = PostSchema

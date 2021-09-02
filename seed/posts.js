@@ -1,5 +1,5 @@
 const db = require('../db')
-const { Posts} = require('../models')
+const { Posts } = require('../models')
 const Posts = require('../models/post')
 
 db.on('error', console.error.bind(console, 'MongoDB connection error:'))
@@ -7,20 +7,20 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 const main = async () => {
   const Post = [
     {
-      text: '',
-      name: ''
+      text: 'hello',
+      name: 'John'
     },
     {
-      text: '',
-      name: ''
+      text: 'hello',
+      name: 'Smith'
     },
     {
-      text: '',
-      name: ''
+      text: 'hello!',
+      name: 'Liam'
     },
     {
-      text: '',
-      name: ''
+      text: 'hi!',
+      name: 'Francis'
     }
   ]
 

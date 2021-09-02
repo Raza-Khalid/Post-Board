@@ -20,8 +20,11 @@
   },
   "homepage": "https://github.com/Raza-Khalid/Unit2-Project#readme",
   "dependencies": {
+    "@material-ui/core": "^4.12.3",
+    "cors": "^2.8.5",
     "express": "^4.17.1",
     "mongoose": "^6.0.2",
+    "morgan": "^1.10.0",
     "nodemon": "^2.0.12"
   }
 }
