@@ -3,7 +3,6 @@ import { BASE_URL } from '../globals'
 import PostCard from '../components/PostCard'
 import axios from 'axios'
 
-
 const AllPost = () => {
   const [posts, setPosts] = useState([])
 
@@ -18,7 +17,18 @@ const AllPost = () => {
   }
   const deletePost = async (id) => {
     await axios.delete(`${BASE_URL}/posts/${id}`)
-    setPosts(posts.filter((post)=>post._id !==id))
+    setPosts(posts.filter((post) => post._id !== id))
+  }
+  const likePost = async (post) => {
+    post.likes.push('raza')
+    const likes = { likes: post.likes }
+    await axios.patch(`${BASE_URL}/posts/${post._id}`, likes)
+    getPosts()
+  }
+  const addComment = async () => {
+    let res = await axios.get(`${BASE_URL}/comments`)
+    console.log('data', res.data)
+    setPosts(res.data.posts)
   }
 
   console.log(posts)
@@ -28,7 +38,14 @@ const AllPost = () => {
       <section className="container-grid">
         {posts.map((post) => (
           <div>
-            <PostCard key={posts._id} post={post} deletePost={deletePost}/>
+            <PostCard
+              key={posts._id}
+              post={post}
+              deletePost={deletePost}
+              likePost={likePost}
+              addComment={addComment}
+              
+            />
           </div>
         ))}
       </section>

@@ -14,6 +14,26 @@ function PostCard(props) {
       ))}
       <button
         style={{
+          background: '#8FBC8F',
+          color: 'black',
+          margin: '6px'
+        }}
+        onClick={() => props.likePost(props.post)}
+      >
+        Like
+      </button>
+      <button
+        style={{
+          background: '#8FBC8F',
+          color: 'black',
+          margin: '6px'
+        }}
+        onClick={() => props.AddComment(props.post._id)}
+      >
+        Comment
+      </button>
+      <button
+        style={{
           background: '#00FA9A',
           color: 'black',
           margin: '6px'

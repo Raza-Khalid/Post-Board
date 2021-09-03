@@ -3,12 +3,12 @@ import React from 'react'
 import { BASE_URL } from '../globals'
 
 const AddComment = (props) => {
-  function handleSubmit(e) {
+  function handleChange(e) {
     e.preventDefault()
     const newComment = {
       author: e.target.author.value,
       content: e.target.content.value,
-
+    getComment()
     }
     createComment(newComment)
   }
@@ -39,3 +39,4 @@ const AddComment = (props) => {
 }
 
 export default AddComment
+
