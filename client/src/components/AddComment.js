@@ -2,29 +2,27 @@ import axios from 'axios'
 import React from 'react'
 import { BASE_URL } from '../globals'
 
-const AddPost = (props) => {
+const AddComment = (props) => {
   function handleSubmit(e) {
     e.preventDefault()
-    const newPost = {
+    const newComment = {
       author: e.target.author.value,
       content: e.target.content.value,
-      channel: e.target.channel.value
+
     }
-    createPost(newPost)
+    createComment(newComment)
   }
-  async function createPost(post) {
-    let res = await axios.post(`${BASE_URL}/posts`, post)
+  async function createComment(comment) {
+    let res = await axios.post(`${BASE_URL}/comments`, comment)
     console.log(res)
   }
   return (
-    <div className="AddPost">
+    <div className="AddComment">
       <form onSubmit={handleSubmit}>
-        <label>Author</label>
-        <input type="text" name="author" />
+        <label>Name</label>
+        <input type="text" name="name" />
         <label>Content</label>
         <input type="text" name="content" />
-        <label>Channel</label>
-        <input type="text" name="channel" />
         <button
           style={{
             background: '#00FA9A',
@@ -33,11 +31,11 @@ const AddPost = (props) => {
           }}
           type="submit"
         >
-          Post
+          Comment
         </button>
       </form>
     </div>
   )
 }
 
-export default AddPost
+export default AddComment

@@ -11,6 +11,7 @@ const Navbar = () => {
         <a href="/">Home</a>
         <a href="/about">About</a>
         <a href="/allpost">All Posts</a>
+        <a href="/allpost">Delete Post</a>
       </div>
     </nav>
   )

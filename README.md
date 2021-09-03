@@ -5,7 +5,7 @@
 
 ---
 
-![Messages Board](images/messges%20.jpeg)
+![Messages Board](images/logo.png)
 
 >### **Description**
 
@@ -18,24 +18,50 @@ Post Board is a communication tool you can use to make any annoucement or post a
 * Express.js
 * React.js
 * Node.js
+  
+  ![Mern](images/mern.png)
 
 ---
+>### **Nav Bar**
 
->### **Entity Relationship Diagram**
+Nav Bar makes it easy for the user to navigate between different pages quicker. 
 
-The database will take in the senders information. Also, the information related to the messages being posted. Data will be denormalized using one to many relationship connecting a single user to multiple message posts. Entries will be connected by a generated Obhject ID. 
+![Messages Board](images/nav.png)
 
-![Entity Relationship Diagram](images/erd.png)
+----
 
----
+>### **Add a Post**
 
->### **Component Hierarchy Diagram**
+Simply navigate to the Home page and Start adding your posts by filling out the form.  
 
-Component Hierarchy Diagram is there to make it easier for the author to visually see the structring of the files. 
+![Messages Board](images/../client/images/addpost.png)
 
-![Component Hierarchy Diagram](images/comp.png)
+----
 
----
+>### **Post**
+
+Navigate to the "All Post" page and look at your post. 
+
+![Messages Board](images/../client/images/post.png)
+
+----
+
+>### **Add a Post**
+
+Simply navigate to the Home page and Start adding your posts by filling out the form.  
+
+![Messages Board](images/../client/images/addpost.png)
+
+----
+
+>### **Delete Post**
+
+made a typo? or changed your mind? dont worry simply navigate to the "Delete post" page or and press Delete Post'
+
+![Messages Board](images/../client/images/../../images/delete.png)
+
+----
+
 
 >### **Task List**
 - [ ] Design Frontend with React
@@ -52,6 +78,8 @@ Component Hierarchy Diagram is there to make it easier for the author to visuall
 
 >### **Credits**
 - [ ] [Lucid Chart](https://www.lucidchart.com/pages/templates/ui-mockup/lucidchart-login-or-sign-up-page-wireframe)  
+
+- [ ] [Free Logo Desing](https://editor.freelogodesign.org/en/logo/edit/c30ac36c06d2407dbe46d30655c3866b?template=1501872&tab=main)  
 
 
 ---

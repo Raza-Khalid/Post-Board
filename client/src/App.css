@@ -1,5 +1,6 @@
 .App {
-  text-align:left
+  text-align:left;
+  background-color: #8FBC8F;
 }
 
 .main-nav {
@@ -12,6 +13,14 @@
   font-family: Arial, Helvetica, sans-serif;
   padding: 20px;
 }
+/* 
+.main-nav  {
+  opacity: 0.9;
+}
+.main-nav .info-wrapper {
+  padding: 1em;
+} */
+
 
 .main-nav a {
   text-decoration: none;
@@ -27,8 +36,8 @@
   background-color: #3D9970;
   cursor: pointer;
   transition: all 0.4s;
-  padding-left:15px;
-  margin: 4px;
+  padding-left:21px;
+  margin: 40px;
 }
 
 .card:hover {
@@ -42,3 +51,8 @@
 }
 
 
+.AddPost{
+  background-color: #3CB371;
+  padding: 5px;
+  margin: 5px;
+}

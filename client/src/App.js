@@ -9,8 +9,6 @@ import AllPost from './components/AllPost'
 import Home from './pages/Home'
 import About from './pages/About'
 
-// import Soccer from './components/Soccer'
-
 const App = () => {
   const [posts, setPosts] = useState([])
   const [inputField, setInputField] = useState([{ comment: '' }])
@@ -35,12 +33,6 @@ const App = () => {
           <Route exact path="/allpost" component={AllPost} />
         </Switch>
       </main>
-      {/* <div className="button">
-        <button> Comment</button>
-        <input type="text" />
-        <button>Likes</button>
-        <input type="number" />
-      </div> */}
     </div>
   )
 }

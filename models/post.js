@@ -6,7 +6,7 @@ const PostSchema = new Schema(
     content: { type: String, required: true },
     channel: { type: String, required: true },
     likes: [String],
-    comments: [String]
+    comments: [] //{ type: Schema.Types.ObjectId, ref: 'comments_id' }
   },
   { timestamps: true }
 )

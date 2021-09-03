@@ -50,6 +50,7 @@ const updatePost = async (req, res) => {
 }
 
 const deletePost = async (req, res) => {
+  console.log(req.params)
   try {
     const { id } = req.params
     const deleted = await Post.findByIdAndDelete(id)
