@@ -1,14 +1,14 @@
 import React from 'react'
 
 function PostCard(props) {
-  console.log(props)
+  console.log('PostCard props:', props)
   return (
     <div className="card">
       <h3>{props.post.author}</h3>
       <p>{props.post.content}</p>
       <h4>Channel: {props.post.channel}</h4>
       <h4>likes: {props.post.likes.length}</h4>
-      <h4>Comments: 2</h4>{' '}
+      <h4>Comments: 2</h4>
       {props.post.comments.map((comment) => (
         <p key={comment}>{comment}</p>
       ))}
@@ -28,7 +28,7 @@ function PostCard(props) {
           color: 'black',
           margin: '6px'
         }}
-        onClick={() => props.AddComment(props.post._id)}
+        onClick={() => props.addComment(props.post._id)}
       >
         Comment
       </button>

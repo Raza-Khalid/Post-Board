@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { BASE_URL } from '../globals'
 import PostCard from '../components/PostCard'
+import AddComment from '../components/AddComment'
 import axios from 'axios'
 
 const AllPost = () => {
@@ -12,7 +13,7 @@ const AllPost = () => {
 
   const getPosts = async () => {
     let res = await axios.get(`${BASE_URL}/posts`)
-    console.log('data', res.data)
+    console.log('getPosts data', res.data)
     setPosts(res.data.posts)
   }
   const deletePost = async (id) => {
@@ -27,11 +28,11 @@ const AllPost = () => {
   }
   const addComment = async () => {
     let res = await axios.get(`${BASE_URL}/comments`)
-    console.log('data', res.data)
-    setPosts(res.data.posts)
+    console.log('addComment data', res.data)
+    AddComment(res.data.comments)
   }
 
-  console.log(posts)
+  console.log('AllPost posts:', posts)
   return (
     <div>
       <h1>Posts</h1>
@@ -44,7 +45,6 @@ const AllPost = () => {
               deletePost={deletePost}
               likePost={likePost}
               addComment={addComment}
-              
             />
           </div>
         ))}

@@ -7,8 +7,7 @@ const AddComment = (props) => {
     e.preventDefault()
     const newComment = {
       author: e.target.author.value,
-      content: e.target.content.value,
-    getComment()
+      content: e.target.content.value
     }
     createComment(newComment)
   }
@@ -18,7 +17,7 @@ const AddComment = (props) => {
   }
   return (
     <div className="AddComment">
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleChange}>
         <label>Name</label>
         <input type="text" name="name" />
         <label>Content</label>
@@ -39,4 +38,3 @@ const AddComment = (props) => {
 }
 
 export default AddComment
-
